@@ -58,7 +58,7 @@ def learning(spiking_neurons, spike_times, taup, taum, Ap, Am, wmax, w_init):
     STDP.connect(condition="i!=j", p=connection_prob_PC)
     STDP.w = w_init
 
-    run(400*second, report="text")
+    run(9.2*second, report="text")
 
     weightmx = np.zeros((nPCs, nPCs))
     weightmx[STDP.i[:], STDP.j[:]] = STDP.w[:]
